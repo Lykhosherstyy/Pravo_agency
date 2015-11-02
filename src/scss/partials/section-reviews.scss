@@ -1,0 +1,112 @@
+/*-----Section-reviews----------------------------------------*/
+
+.section-reviews{
+	text-align: center;
+	.post-list{
+		text-align: center;
+		border-top: none;
+		padding-bottom: 50px;
+		border-bottom: 1px solid #dcdcdc;
+		.post-item{
+			display: inline-block;
+			vertical-align: top;
+			text-align: left;
+			width: 29.6%;
+			margin-top: 15px;
+			margin-right:3.44827%;
+			&:last-child{
+				margin-right: 0;
+			}
+			@include br(phablet){
+				display: block;
+				width: 100%;
+			}
+			.entry{
+				position: relative;
+				cursor: pointer;
+				min-height: 300px;
+				padding:40px 0 0 0;
+				&:hover .author-name{
+					color: $base-color;
+				}
+				blockquote{
+					padding-right: 40px;
+					font-size: 17px;
+					line-height: 25px;
+					margin-bottom: 30px;
+					@include font(GothamPro,normal,normal);
+					@include br(mobile){
+						text-align: center;
+				    	padding: 0;
+				  	}
+				}
+			}
+		}
+	}
+}
+
+.author{
+	@include br(mobile){
+	    text-align: center;
+	  }
+	.author-img{
+		position: relative;
+		height: 55px;
+		width: 55px;
+		overflow: hidden;
+		@include border-radius(50%);
+		@include br(mobile){
+	    	margin: 0 auto;
+	  	}
+		img{
+			width: 100%;
+		}
+	}
+	.author-name{
+		margin:15px 0; 
+		font-size: 13px;
+		color: $content-color;
+		@include font(GothamPro-Bold,normal,normal);
+	}
+	.author-position{
+		text-transform: uppercase;
+		font-size: 15px;
+		color: $content-color;
+		.author-company{
+			font-size: 12px;
+			font-weight: bold;
+			color:$content-color;
+			text-transform: none;
+			text-decoration: underline;
+			position: relative;
+			margin-left: 15px;
+			@include font(GothamPro-Bold,normal,normal);
+			&:before{
+				content: "";
+				position:absolute;
+				width: 3px;
+				height: 3px;
+				left: -10px;
+				top: 50%;
+				@include transform(translateY(-50%));
+				background-color: #a70c5d;
+				@include border-radius(50%);
+			}
+		}
+	}
+}
+.show-more{
+	display:inline-block;
+	position: relative;
+	padding: 0 30px;
+	line-height: 20px;
+	height: 20px;
+	margin-top: 65px;
+	color: $secondary-color;
+	font-size: 11px;
+	text-transform: uppercase;
+	@include font(GothamPro-Black,normal,normal);
+	&:hover .icon-more{
+		transform: rotate(720deg);
+	}
+}

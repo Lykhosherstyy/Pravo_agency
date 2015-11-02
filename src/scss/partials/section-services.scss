@@ -1,0 +1,111 @@
+
+/*-----Section-services----------------------------------------*/
+.section-services{
+	h3{
+		font-size: 15px;
+		padding-right: 30px;
+		color:$content-color;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		@include font(GothamPro-Bold,normal,normal);
+		@include br(mobile){
+	    	font-size: 13px;
+	  	}
+	}
+	.row{
+		padding-bottom: 25px;
+		border-bottom: 2px dotted #dcdcdc;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	.post-list{
+		margin-top: 60px;
+		border-top: 1px solid #dcdcdc;
+		border-bottom: 1px solid #dcdcdc;
+		@include br (mobile){
+			margin-top: 0;
+			border: none;
+		}
+	}
+	.post-item{
+		margin-top: 30px;
+		width: 50%;
+		min-height: 200px;
+		&:first-child{
+			border-right:2px dotted #dcdcdc;
+			@include br(phablet){
+			    border: none;
+			}
+		}
+		@include br(phablet){
+			width: 100%;
+		}
+		p{
+			text-align: left;
+			margin-bottom: 5px;
+			margin: 0;
+			color: #414252;
+			font-size: 13px;
+			@include font(GothamPro,normal,normal);
+		}
+		ul{
+			li{
+				position: relative;
+				font-size: 13px;
+				padding-left: 20px;
+				vertical-align: middle;
+				color: #414252;
+				line-height: 20px;
+				@include font(GothamPro,normal,normal);
+				&::before{
+					content: "";
+					position: absolute;
+					top: 8px;
+					left: 0;
+					@include sprite($list-style-hover);
+				}
+			}
+		}
+	}
+}
+.entry{
+	padding:30px 0 0 20px;
+	@include clr();
+	.entry-content{
+		position: relative;
+		width: 435px;
+		margin: 0 auto;
+		padding-left: 70px;
+		@include br(tablet){
+			width: 340px;
+		}
+		@include br(phablet){
+			width: 100%;
+		}
+		@include br(mobile){
+	    	padding-left: 0;
+	  	}
+		a{
+			&:hover .info{
+				color: #fff;
+				background-color: $base-color;
+			}
+		}
+		.info{
+			display: block;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: 30px;
+			height: 30px;
+			padding:6px 0; 
+			text-align:center;
+			font-size: 16px;
+			color: $content-color;
+			border:2px solid $base-color;
+			@include font(BanderaPro-Bold,normal,normal);
+			@include border-radius(50%);
+		}
+	}
+}

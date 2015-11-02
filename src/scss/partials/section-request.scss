@@ -1,0 +1,131 @@
+/*-----Section-request----------------------------------------*/
+.section-request{
+	padding-bottom: 30px;
+	border-bottom: 1px solid #dcdcdc;
+	.main-title{
+		margin-bottom: 70px;
+	}
+	.container{
+		max-width: 800px;
+	}
+	form{
+		text-align: center;
+		padding: 0 10px;
+		.field-set{
+			@include clr();
+		}
+		.submit-btn{
+			margin-top: 200px;
+			padding: 20px 55px;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			@include br(phablet){
+				margin-top: 20px;
+			}
+		}
+	}
+}
+.field-input{
+	width: 48%;
+	@include br(phablet){
+		width: 100%;
+	}
+	#name,
+	#phone,
+	#mail,
+	#site
+	{
+		width: 100%;
+		margin-bottom: 30px;
+		border: none;
+		text-transform: uppercase;
+		outline: none;
+		cursor: pointer;
+		font-size: 11px;
+		line-height: 20px;
+		color:$content-color;
+		@include font(GothamPro-Medium,normal,normal);
+		border-bottom: 1px solid #dcdcdc;
+		&::-webkit-input-placeholder {color:#3f4147;}
+		&::-moz-placeholder          {color:#3f4147;}
+		&:-moz-placeholder           {color:#3f4147;}
+		&:-ms-input-placeholder      {color:#3f4147;}
+		&:focus::-webkit-input-placeholder{
+			line-height: 100px;transition: line-height 0.8s ease;
+		}
+		&:focus::-moz-placeholder{
+			line-height: 100px;transition: line-height 0.8s ease;
+		}
+		&:focus:-moz-placeholder{
+			line-height: 100px;transition: line-height 0.8s ease;
+		}
+		&:focus:-ms-input-placeholder{
+			line-height: 100px;transition: line-height 0.8s ease;
+		}
+	}
+	.interest-list{
+		position: relative;
+		margin-top: 5px;
+		padding: 20px;
+		text-transform: uppercase;
+		font-size: 11px;
+		@include font(GothamPro-Medium,normal,normal);
+		color:$content-color;
+		text-align: left;
+		border:1px solid #dcdcdc;
+		
+		ul{
+			position: absolute;
+			display: none;
+			top: 100%;
+			left: -1px;
+			padding:25px;
+			background: #fff;
+			width: 365px;
+			border:1px solid #dcdcdc;
+			@include br(mobile){
+		    	width: 100%;
+		  	}
+			li{
+				position: relative;
+				cursor: pointer;
+				padding-left: 25px;
+				margin-bottom: 20px;
+				font-size: 13px;
+				text-transform: none;				    
+				&:last-child{
+					margin: 0;
+				}
+				&:hover {
+					color: $base-color;
+				}
+				&:hover .icon-list:before{
+					@include sprite-position($list-style-hover);
+				}
+			}
+		}
+	}
+}
+.field-holder{
+	text-align: left;
+	width: 48%;
+	@include br(phablet){
+		margin-top: 20px;
+		width: 100%;
+	}
+	label{
+		text-transform: uppercase;
+		font-size: 11px;
+		line-height: 20px;
+		@include font(GothamPro-Medium,normal,normal);
+	}
+	textarea{
+		width: 100%;
+		height: 250px;
+		padding: 15px;
+		font-size: 15px;
+		outline: none;
+		@include font(GothamPro,normal,normal);
+	}
+}

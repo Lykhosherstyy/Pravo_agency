@@ -1,0 +1,12 @@
+/*-----Content----------------------------------------*/
+.section{
+	margin-bottom: 55px;
+	p{
+		max-width: 600px;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 15px;
+		line-height: 20px;
+		@include font(GothamPro,normal,normal);
+	}
+}

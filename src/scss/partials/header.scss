@@ -1,0 +1,166 @@
+/*-----Header----------------------------------------*/
+.mainheader{
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+	width: 100%;
+	padding: 25px 0;
+	background-color: #fff;
+	@include br(mobile){
+		padding: 10px 0;
+		position: relative;
+	}
+	.container{
+		max-width: 960px;
+	}
+	.logo{
+		float: left;
+		width: 110px;
+	}
+	.nav{
+		float: right;
+		.menu{
+			margin: 15px 160px 0 0;
+			@include clr();
+			@include br(phablet){
+				display: none;
+				position: absolute;
+				top:100%;
+				left: 0;
+				width: 100%;
+				background-color: #fff;
+				z-index: 100;
+				margin:0;
+				@include box-shadow(0,1px,1px,rgba(0,0,0,.4));
+			}
+			li{
+				float: left;
+				position: relative;
+				margin-right: 30px;
+				@include br(phablet){
+					text-align: center;
+					float: none;
+					margin-right: 0;
+					margin-bottom: 5px;
+				}
+				&:before{
+					content: "";
+				    position: absolute;
+				    bottom: 5px;
+				    width: 100%;
+				    margin: 0 auto;
+				    display: block;
+				    background: transparent;
+				    height: 2px;
+				    opacity: 0;
+				    @include transition(all 0.3s linear);
+				    
+				}
+				&:hover::before{
+					opacity: 1;
+					bottom: -5px;
+					background-color: #a70c5d;
+					@include br(phablet){
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.mobile-button{
+	display: none;
+	background-color:#fff;
+	color:$base-color;
+	text-transform: uppercase;
+	margin-right: 80px;
+	padding: 12px 5px;
+	@include br(phablet){
+		display: block;
+	}
+	&:hover .menu{
+		display: block;
+
+	}
+}
+.fixed{
+  background: #f7f7f7;
+}
+.menu a{
+	@include font(GothamPro-Medium,normal,normal);
+	text-transform: uppercase;
+	color: $content-color;
+	font-size: 12px;
+	&:hover{
+		color:$base-color;
+	}
+}
+.lang-switch{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width:70px;
+	height: 40px;
+    -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select: none;
+    .langswitch-checkbox {
+	    display: none;
+	}
+	.langswitch-label {
+	    display: block;
+	    height: 40px;
+	    overflow: hidden;
+	    cursor: pointer;
+	    border: 2px solid #dfdfe2;
+	    @include border-radius(35px);
+	    .langswitch-inner {
+		    display: block; width: 200%;
+		    margin-left: -100%;
+		    @include transition(margin 0.3s ease-in 0s);
+		    @include font(GothamPro-Black,normal,normal);
+		    &:before{
+		    	content: "UA";
+   				padding-left: 15px;
+			    display: block;
+			    float: left;
+			    width: 50%;
+			    height: 40px;
+			    line-height: 38px;
+			    font-size: 11px;
+			    background-color: #FFFFFF;
+			    color:$base-color;
+			}
+			&:after{
+				content: "RU";
+			    padding-right: 15px;
+			    text-align: right;
+				display: block;
+				float: left;
+				width: 50%;
+				height: 40px;
+				line-height: 38px;
+				font-size: 11px;
+				background-color: #FFFFFF;
+				color: $base-color;
+			}
+		}
+	}
+}
+.langswitch-switch {
+    display: block;
+    width: 16px;
+    height: 16px; 
+    background: #dfdfe2;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 10px;
+    @include border-radius(50%);
+}
+.langswitch-checkbox:checked + .langswitch-label .langswitch-inner {
+    margin-left: 0;
+}
+.langswitch-checkbox:checked + .langswitch-label .langswitch-switch {
+    left: 40px; 
+}

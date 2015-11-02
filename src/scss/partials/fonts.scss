@@ -1,0 +1,14 @@
+@each $font-face in GothamPro-Medium, GothamPro-Black, GothamPro-Bold, GothamPro, BanderaPro-Bold{
+    @font-face {
+          font-family: $font-face; font-style: normal; font-weight: normal;
+          src: url('../fonts/#{$font-face}.eot?#iefix');
+          src: url('../fonts/#{$font-face}.eot?') format('eot'),
+               url('../fonts/#{$font-face}.woff') format('woff'),
+               url('../fonts/#{$font-face}.ttf')  format('truetype');
+    }
+}
+@mixin font($font, $style: normal, $weight: normal) {
+    font-family: $font;
+    font-style:  $style;
+    font-weight: $weight;
+}

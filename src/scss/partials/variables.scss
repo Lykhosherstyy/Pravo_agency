@@ -1,0 +1,150 @@
+/*-----variables----------------------------------------*/
+$base-color:#A70C5D;
+$secondary-color:#454545;
+$content-color:#3f4147;
+/*-----Icons----------------------------------------*/
+.icon-arrow{
+	&:before{
+		content: "";
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		@include transform(translateY(-50%));
+		@include sprite($arrow-down);
+	}
+}
+.icon-arrow-up{
+	&:before{
+		content: "";
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		@include transform(translateY(-50%));
+		@include sprite($arrow-up);
+	}
+}
+.icon-quote{
+	&:before{
+		content: "";
+		position: absolute;
+		display: inline-block;
+		top: 0px;
+		left: 0px;
+		@include sprite($quote);
+	}
+	&:hover:before{
+		@include sprite-position($quote-hover);
+	}
+}
+.icon-more{
+	@include transition(all 1.2s);
+	&:before{
+		content: "";
+	    position: absolute;
+	    top: 0px;
+	    left: 0px;
+		@include sprite($more);
+	}
+}
+.icon-list{
+	&:before{
+		content: "";
+	    position: absolute;
+	    top: 50%;
+	    left: 0;
+		@include transform(translateY(-50%));
+		@include sprite($list-style);
+		&:hover:before{
+			@include sprite-position($list-style-hover);
+		}
+	}
+}
+.icon-play{
+	&:before{
+		content: "";
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+		@include transform(translateY(-50%) translateX(-50%));
+		z-index: 4;
+		@include sprite($play);
+	}
+}
+.icon-document{
+	@include br(mobile){
+		display: none;
+	  	}
+	&:before{
+		content: "";
+	    position: absolute;
+	    top:-15px;
+	    left: 0;
+		@include sprite($document);
+	}
+	&:hover:before{
+		@include sprite-position($document-hover);
+	}
+}
+.icon-optimize{
+	@include br(mobile){
+		display: none;
+	  	}
+	&:before{
+		content: "";
+	    position: absolute;
+	    top:-15px;
+	    left: 0;
+		@include sprite($optimize);
+	}
+	&:hover:before{
+		@include sprite-position($optimize-hover);
+	}
+}
+.icon-note{
+	@include br(mobile){
+		display: none;
+	  	}
+	&:before{
+		content: "";
+	    position: absolute;
+	    top:-15px;
+	    left: 0;
+		@include sprite($note);
+	}
+	&:hover:before{
+		@include sprite-position($note-hover);
+	}
+}
+.icon-judge{
+	@include br(mobile){
+		display: none;
+	  	}
+	&:before{
+		content: "";
+	    position: absolute;
+	    top:-15px;
+	    left: 0;
+		@include sprite($judge);
+	}
+	&:hover:before{
+		@include sprite-position($judge-hover);
+	}
+}
+.icon-facebook{
+	@include sprite($facebook);
+	&:hover{
+		@include sprite-position($facebook-hover);
+	}
+}
+.icon-twitter{
+	@include sprite($twitter);
+	&:hover{
+		@include sprite-position($twitter-hover);
+	}
+}
+.icon-instagram{
+	@include sprite($-instagram);
+	&:hover{
+		@include sprite-position($instagram-hover);
+	}
+}

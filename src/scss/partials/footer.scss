@@ -1,0 +1,54 @@
+/*-----Footer----------------------------------------*/
+.footer{
+	text-align: center;
+	padding-bottom: 30px;
+	@include br(mobile){
+		padding-bottom: 5px;
+	  }
+	h4{
+		font-size: 11px;
+		color:$content-color;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+		@include font(GothamPro-Black,normal,normal);
+		@include br(mobile){
+			margin-bottom: 10px;
+	  	}
+	}
+	p{
+		margin-bottom: 25px;
+		font-size: 18px;
+		color:$content-color;
+		@include font(GothamPro,normal,normal);
+		@include br(mobile){
+			font-size: 12px;
+			margin-bottom: 5px;
+	  	}
+	}
+	.mail{
+		color: $base-color;
+		text-decoration: underline;
+		@include br(mobile){
+			margin-bottom: 10px;
+		}
+	}
+	.social{
+		margin-bottom: 30px;
+		.social-list{
+				li{
+					display: inline-block;
+					i{
+						display: inline-block;
+					}
+				}
+			}
+	}
+	.copyright{
+		font-size: 12px;
+		color:$content-color;
+		@include font(GothamPro,normal,normal);
+		span{
+			@include font(GothamPro-Bold,normal,normal);
+		}
+	}
+}
